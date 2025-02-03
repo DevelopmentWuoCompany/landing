@@ -1,3 +1,8 @@
+Para cumplir con los requisitos de **Prominent Disclosure & Consent Requirement** de Google Play, debes agregar una sección clara y prominente en tu aplicación que informe al usuario sobre el acceso a la ubicación en segundo plano y cómo se utilizarán esos datos. A continuación, te muestro cómo podrías modificar tu código HTML para incluir esta información de manera destacada y cumplir con las políticas de Google Play.
+
+### Modificación del código HTML:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,6 +50,13 @@
             margin-bottom: 1rem;
         }
 
+        .disclosure {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-left: 4px solid #4CAF50;
+            margin-bottom: 2rem;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
@@ -59,7 +71,18 @@
 <body>
     <div class="content">
         <h1>POLÍTICAS DE PRIVACIDAD PARA APLICACIONES MÓVILES Y WEB</h1>
-        
+
+        <!-- Sección de Prominent Disclosure -->
+        <div class="disclosure">
+            <h2>DECLARACIÓN DE DIVULGACIÓN PROMINENTE</h2>
+            <p>
+                <strong>Canéalo</strong> recopila y utiliza datos de ubicación en segundo plano para permitir el seguimiento de incidentes y reportes incluso cuando la aplicación está cerrada o no está en uso. Estos datos se utilizan exclusivamente para mejorar la eficiencia del servicio y garantizar una respuesta rápida en caso de emergencias.
+            </p>
+            <p>
+                Al utilizar esta aplicación, usted acepta que <strong>Canéalo</strong> acceda a su ubicación en segundo plano para proporcionar este servicio. Puede gestionar o revocar este permiso en cualquier momento desde la configuración de su dispositivo.
+            </p>
+        </div>
+
         <h2>OBJETO</h2>
         <p>Las presentes condiciones generales regulan el uso de la aplicación informática móvil "CANEALO" (en adelante, la "Aplicación") del desarrollador NEIRA WUO COMPANY SOCIEDAD ANONIMA CERRADA.</p>
         <p>Al acceder y utilizar esta Aplicación, usted ("Usuario") reconoce que ha leído y aceptado estas Condiciones Generales de Uso, y se compromete a cumplir con todos sus términos y condiciones. Asimismo, el Usuario reconoce y acepta que el acceso y uso de esta Aplicación estará sujeto a las Condiciones Generales de Uso que se encuentren en vigor en el momento en que acceda a la misma. NEIRA WUO COMPANY SOCIEDAD ANONIMA CERRADA se reserva el derecho de modificar en cualquier momento las presentes Condiciones Generales de Uso, difundiendo la respectiva versión vigente a través de su portal web. Asimismo, se reserva el derecho a suspender, interrumpir o dejar de operar la Aplicación en cualquier momento.</p>
